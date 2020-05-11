@@ -1,11 +1,15 @@
 <template>
-    <div id="app-about">
+    <div class="app-about">
         This is about page
     </div>
 </template>
 
 <script>
-export default {
-    
-}
+    import { eventBus } from './main';
+
+    export default {
+        created() {
+            eventBus.$emit('aboutLoaded', true)            
+        }    
+    }
 </script>

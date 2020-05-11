@@ -1,11 +1,15 @@
 <template>
-    <div id="app-home">
+    <div class="app-home">
         This is home
     </div>
 </template>
 
 <script>
-export default {
-    
-}
+    import { eventBus } from './main';
+
+    export default {
+        created() {
+            eventBus.$emit('homeLoaded', true)            
+        }    
+    }
 </script>

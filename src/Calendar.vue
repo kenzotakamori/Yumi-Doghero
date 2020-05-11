@@ -5,7 +5,11 @@
 </template>
 
 <script>
-export default {
-    
-}
+    import { eventBus } from './main';
+
+    export default {
+        created() {
+            eventBus.$emit('calendarLoaded', true)            
+        }    
+    }
 </script>

@@ -1,8 +1,13 @@
 <template>
     <div id="app-content">
-        <keep-alive>
+        <!-- <keep-alive>
             <component :is="currentView"></component>
-        </keep-alive>
+        </keep-alive> -->
+        <app-home></app-home>
+        <app-about v-if="homeLoaded"></app-about>
+        <app-dogs v-if="aboutLoaded"></app-dogs>
+        <app-calendar v-if="dogsLoaded"></app-calendar>
+        <app-contact v-if="calendarLoaded"></app-contact>        
     </div>   
 </template>
 
@@ -19,10 +24,26 @@
             eventBus.$on('changeView', (data) => {
                 this.view = data.view
             });
+            eventBus.$on('homeLoaded', (data) => {
+                this.homeLoaded = true
+            });
+            eventBus.$on('aboutLoaded', (data) => {
+                this.aboutLoaded = true
+            });
+            eventBus.$on('dogsLoaded', (data) => {
+                this.dogsLoaded = true
+            });
+            eventBus.$on('calendarLoaded', (data) => {
+                this.calendarLoaded = true
+            });
         },
         data() {
             return {
-                view: "app-home"
+                view: "app-home",
+                homeLoaded: false,
+                aboutLoaded: false,
+                dogsLoaded: false,
+                calendarLoaded: false
             }
         },
         computed: {

@@ -1,5 +1,5 @@
 <template>
-    <div id="app-header">
+    <div class="app-header">
         <ul>
             <li>
                 <a href="#" @click.prevent="navigate('app-home')">Home</a>
@@ -34,3 +34,31 @@
         
     }
 </script>
+
+<style>
+    .app-header {
+        background-color: red;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+    }
+
+    .app-header ul {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .app-header ul li {
+        list-style-type: none;
+        font-weight: 700;
+        width: 20%;
+    }
+
+    .app-header ul li a {
+        text-decoration: none;
+        color: white;
+    }
+</style>
