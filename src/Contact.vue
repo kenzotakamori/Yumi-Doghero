@@ -1,7 +1,9 @@
 <template>
-    <div id="app-contact">
-        <h1>Contact</h1>
-    </div>
+    <section id="app-contact">
+        <div class="container">
+            <h1>Contact</h1>
+        </div>
+    </section>
 </template>
 
 <script>

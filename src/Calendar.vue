@@ -1,7 +1,9 @@
 <template>
-    <div id="app-calendar">
-        <h1>Calendar</h1>
-    </div>
+    <section id="app-calendar">
+        <div class="container">
+            <h1>Calendar</h1>
+        </div>
+    </section>
 </template>
 
 <script>

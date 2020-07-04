@@ -1,5 +1,5 @@
 <template>
-    <div class="app-footer">
+    <footer>
         <div class="row">
             <a v-bind:href="instagramUrl" target="_blank">
                 <i class="fab fa-instagram"></i>
@@ -14,7 +14,7 @@
         <div class="row">
             Vai viajar? Deixe seu dog comigo!
         </div>
-    </div>
+    </footer>
 </template>
 
 <script>
@@ -30,7 +30,7 @@ export default {
 </script>
 
 <style>
-    .app-footer {
+    footer {
         background-color: red;
         height: 80px;
         line-height: 40px;
@@ -40,7 +40,7 @@ export default {
         width: 100%;
     }
 
-    .app-footer a {
+    footer a {
         text-decoration: none;
         color: white;
         font-size: 30px;

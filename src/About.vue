@@ -1,7 +1,9 @@
 <template>
-    <div class="app-about">
-        <h1>About</h1>
-    </div>
+    <section class="app-about">
+        <div class="container">
+            <h1>About</h1>
+        </div>
+    </section>
 </template>
 
 <script>

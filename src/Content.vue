@@ -1,8 +1,5 @@
 <template>
     <div id="app-content">
-        <!-- <keep-alive>
-            <component :is="currentView"></component>
-        </keep-alive> -->
         <app-home></app-home>
         <app-about v-if="homeLoaded"></app-about>
         <app-dogs v-if="aboutLoaded"></app-dogs>
@@ -60,3 +57,13 @@
         }
     }
 </script>
+<style>
+    .container {
+        max-width: 1140px!important;
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+</style>

@@ -1,28 +1,28 @@
 <template>
-    <div id="app-dogs">
-        <h1>Dogs</h1>
-        <table>
-            <tr>
-                <td class='dogs-catalog'>
-                    <div v-for="dog in dogs" v-bind:key="dog.id">
-                        <img :src="dog.imgUrl" @click="showSelectedDog(dog)">
-                    </div>
-                </td>
-                <td class='dogs-info'>
-                    <template v-if="selectedDog" class="dog-picture">
-                        <img :src="selectedDog.imgUrl">
-                        <h2>{{selectedDog.name}}</h2>
-                        <p>{{selectedDog.comment}}</p>
-                    </template>
-                    <template v-else>
-                        <p>Clique em algum dog!</p>   
-                    </template>
-                </td>
-            </tr>
-        </table>
-        
-        
-    </div>
+    <section id="app-dogs">
+        <div class="container">
+            <h1>Dogs</h1>
+            <table>
+                <tr>
+                    <td class='dogs-catalog'>
+                        <div v-for="dog in dogs" v-bind:key="dog.id">
+                            <img :src="dog.imgUrl" @click="showSelectedDog(dog)">
+                        </div>
+                    </td>
+                    <td class='dogs-info'>
+                        <template v-if="selectedDog" class="dog-picture">
+                            <img :src="selectedDog.imgUrl">
+                            <h2>{{selectedDog.name}}</h2>
+                            <p>{{selectedDog.comment}}</p>
+                        </template>
+                        <template v-else>
+                            <p>Clique em algum dog!</p>   
+                        </template>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </section>
 </template>
 
 <script>

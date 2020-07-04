@@ -1,5 +1,5 @@
 <template>
-    <div class="app-header">
+    <header>
         <ul>
             <li>
                 <a href="#" @click.prevent="navigate('app-home')">Home</a>
@@ -17,7 +17,7 @@
                 <a href="#" @click.prevent="navigate('app-contact')">Contact</a>
             </li>
         </ul>
-    </div>
+    </header>
 </template>
 
 <script>
@@ -36,14 +36,14 @@
 </script>
 
 <style>
-    .app-header {
+    header {
         background-color: red;
         height: 40px;
         line-height: 40px;
         text-align: center;
     }
 
-    .app-header ul {
+    header ul {
         display: flex;
         flex-direction: row;
         width: 100%;
@@ -51,7 +51,7 @@
         padding: 0;
     }
 
-    .app-header ul li {
+    header ul li {
         list-style-type: none;
         font-weight: 700;
         width: 20%;
