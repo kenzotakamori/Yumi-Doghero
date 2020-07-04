@@ -1,6 +1,6 @@
 <template>
     <div class="app-about">
-        This is about page
+        <h1>About</h1>
     </div>
 </template>
 

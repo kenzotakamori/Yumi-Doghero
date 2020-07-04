@@ -1,6 +1,6 @@
 <template>
     <div id="app-calendar">
-        This is Calendar page
+        <h1>Calendar</h1>
     </div>
 </template>
 
