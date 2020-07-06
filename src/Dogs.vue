@@ -5,7 +5,7 @@
             <table>
                 <tr>
                     <td class='dogs-catalog'>
-                        <div v-for="dog in dogs" v-bind:key="dog.id">
+                        <div v-for="dog in dogs" :key="dog.id">
                             <img :src="dog.imgUrl" @click="showSelectedDog(dog)">
                         </div>
                     </td>
