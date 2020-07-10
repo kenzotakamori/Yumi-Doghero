@@ -38,7 +38,7 @@
 <style>
     header {
         background-color: red;
-        height: 40px;
+        height: 10vh;
         line-height: 40px;
         text-align: center;
     }

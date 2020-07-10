@@ -8,9 +8,9 @@
                 <a class="prev" @click="plusSlides(-1)">&#10094;</a>
                 <a class="next" @click="plusSlides(1)">&#10095;</a>
             </div>
-        </div>
-        <div v-for="index in quantityImages" :key="index" class="dots">
-            <span class="dot" @click="currentSlide(index)"></span> 
+            <div class="dots">
+                <span v-for="index in quantityImages" :key="index" class="dot" @click="currentSlide(index)"></span> 
+            </div>
         </div>
     </section>
 </template>
@@ -68,6 +68,7 @@
         max-width: 800px;
         position: relative;
         margin: auto;
+        overflow: hidden;
     }
 
     .slideshow-container img {
@@ -127,7 +128,8 @@
     }
 
     .dots {
-        text-align:center;
+        text-align: center;
+        margin-top: 15px;
     }
 
     /* The dots/bullets/indicators */

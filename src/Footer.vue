@@ -32,7 +32,7 @@ export default {
 <style>
     footer {
         background-color: red;
-        height: 80px;
+        height: 10vh;
         line-height: 40px;
         text-align: center;
         color: white;
