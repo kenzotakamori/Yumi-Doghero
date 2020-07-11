@@ -1,6 +1,7 @@
 <template>
     <div id="app-content">
-        <app-home></app-home>
+        <app-cover></app-cover>
+        <app-home v-if="coverLoaded"></app-home>
         <app-about v-if="homeLoaded"></app-about>
         <app-dogs v-if="aboutLoaded"></app-dogs>
         <app-calendar v-if="dogsLoaded"></app-calendar>
@@ -9,6 +10,7 @@
 </template>
 
 <script>
+    import Cover from './Cover.vue';
     import Home from './Home.vue';
     import About from './About.vue';
     import Dogs from './Dogs.vue';
@@ -20,6 +22,9 @@
         created() {
             eventBus.$on('changeView', (data) => {
                 this.view = data.view
+            });
+            eventBus.$on('coverLoaded', (data) => {
+                this.coverLoaded = true
             });
             eventBus.$on('homeLoaded', (data) => {
                 this.homeLoaded = true
@@ -36,7 +41,8 @@
         },
         data() {
             return {
-                view: "app-home",
+                view: "app-cover",
+                coverLoaded: false,
                 homeLoaded: false,
                 aboutLoaded: false,
                 dogsLoaded: false,
@@ -49,6 +55,7 @@
             }
         },
         components: {
+            appCover: Cover,
             appHome: Home,
             appAbout: About,
             appDogs: Dogs,
