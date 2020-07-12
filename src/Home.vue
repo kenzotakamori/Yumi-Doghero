@@ -1,29 +1,25 @@
 <template>
     <section class="app-home">
-        <div class="container">
+        <!-- <div class="carousel-container">
             <div class="home-resources-content">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div id="carousel-home-resources" class="carousel-home-resources">
-                                <carousel-3d 
-                                            :perspective="30"
-                                            :border="0"
-                                            :width="585"
-                                            :height="370"
-                                            :controls-visible="true"
-                                            :space="500"
-                                            :clickable="true">
-                                    <slide v-for="(image, index) in carouselImages" :key="index" :index="index">
-                                        <img :src="image.imgSrc">
-                                    </slide>
-                                </carousel-3d>
-                            </div>
-                        </div>
+                <div class="row">
+                    <div id="carousel-home-resources" class="carousel-home-resources">
+                        <carousel-3d 
+                                    :perspective="30"
+                                    :border="0"
+                                    :width="585"
+                                    :height="370"
+                                    :controls-visible="true"
+                                    :space="500"
+                                    :clickable="true">
+                            <slide v-for="(image, index) in carouselImages" :key="index" :index="index">
+                                <img :src="image.imgSrc">
+                            </slide>
+                        </carousel-3d>
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
     </section>
 </template>
 
@@ -50,6 +46,10 @@
     }
 </script>
 <style>
+    .carousel-container {
+        width: 100%;
+        height: 100vh;
+    }
     .carousel-home-resources .left-1 {
         transform: translateX(-500px) translateZ(-400px) rotateY(-30deg) !important;
     }

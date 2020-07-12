@@ -20,11 +20,16 @@
         <div class="logo">
             Y
         </div>
-        <div v-if="isCoverVisible" class="message">
-            Vai viajar? Deixe seu dog comigo!
+        <div class="message">
+            <template v-if="isCoverVisible">
+                Vai viajar? 
+            </template>
+            <template v-else>
+                Deixe seu dog comigo!
+            </template>
         </div>
-        <div v-else>
-            Testando
+        <div class="hamburguer-menu">
+            H
         </div>
     </header>
 </template>
@@ -59,8 +64,8 @@
         background-color: red;
         width: 100%;
         z-index: 2;
-        height: 10vh;
-        line-height: 40px;
+        height: 50px;
+        line-height: 50px;
         text-align: center;
         position: fixed;
         top: 0;
@@ -69,22 +74,26 @@
         flex-direction: row;
     }
 
-    header ul {
-        display: flex;
-        flex-direction: row;
-        width: 100%;
+    header div {
+        display: inline;
         margin: 0;
         padding: 0;
-    }
-
-    header ul li {
-        list-style-type: none;
         font-weight: 700;
-        width: 20%;
+        color: white;
+        text-align: center;
     }
 
-    header ul li a {
-        text-decoration: none;
-        color: white;
+    header .logo {
+        width: 5%;
     }
+
+    header .hamburguer-menu {
+        width: 5%;
+    }
+
+    header .message {
+        width: 90%;
+        transition: 0.5s ease-in-out;
+    }
+
 </style>
