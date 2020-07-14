@@ -28,7 +28,7 @@
                 Deixe seu dog comigo!
             </template>
         </div>
-        <div class="hamburguer-menu">
+        <div class="menu-button" @click="openMenu">
             H
         </div>
     </header>
@@ -53,6 +53,9 @@
                 eventBus.$emit('changeView', {
                     view: newView
                 })
+            },
+            openMenu() {
+                eventBus.$emit('openMenu', {});
             }
         }
         
@@ -87,7 +90,7 @@
         width: 5%;
     }
 
-    header .hamburguer-menu {
+    header .menu-button {
         width: 5%;
     }
 

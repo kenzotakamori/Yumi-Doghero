@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <hamburguer-menu></hamburguer-menu>
     <app-header></app-header>
     <app-content></app-content>
     <app-footer></app-footer>
@@ -10,6 +11,7 @@
   import Header from './Header.vue';
   import Content from './Content.vue';
   import Footer from './Footer.vue';
+  import HamburguerMenu from './HamburguerMenu.vue';
 
   export default {
     name: 'app',
@@ -21,7 +23,8 @@
     components: {
       appHeader: Header,
       appContent: Content,
-      appFooter: Footer
+      appFooter: Footer,
+      hamburguerMenu: HamburguerMenu
     }
   }
 </script>

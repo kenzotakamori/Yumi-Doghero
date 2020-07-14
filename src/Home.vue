@@ -1,6 +1,6 @@
 <template>
     <section class="app-home">
-        <!-- <div class="carousel-container">
+        <div class="carousel-container">
             <div class="home-resources-content">
                 <div class="row">
                     <div id="carousel-home-resources" class="carousel-home-resources">
@@ -19,7 +19,7 @@
                     </div>
                 </div>
             </div>
-        </div> -->
+        </div>
     </section>
 </template>
 
