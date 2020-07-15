@@ -1,5 +1,5 @@
 <template>
-    <section class="app-about">
+    <section id="app-about">
         <div class="container">
             <h1>About</h1>
         </div>
@@ -11,7 +11,9 @@
 
     export default {
         created() {
-            eventBus.$emit('aboutLoaded', true)            
+            eventBus.$emit('aboutLoaded', {
+                flag: true
+            })            
         }    
     }
 </script>

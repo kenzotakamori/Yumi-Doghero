@@ -1,7 +1,7 @@
 <template>
-  <div class="hamburguer-menu" :class="[showMenu ? '' : 'hide-menu']" v-click-outside="hide">
+  <div class="hamburguer-menu" v-click-outside="hide">
       <div v-for="option in hamburguerOptions" :key="option.title" class="hamburguer-option">
-          <a @click.prevent="navigate(option.section)">
+          <a :href="option.section" @click="hide">
               {{option.title}}
           </a>
       </div>
@@ -13,50 +13,35 @@
     import { eventBus } from './main';
 
     export default {
-        created () {
-            eventBus.$on('openMenu', () => {
-                this.showMenu = true;
-            });
-        },
         data () {
             return {
-                showMenu: false,
                 hamburguerOptions: [
                     {
                         title: 'Home',
-                        section: 'app-home'
+                        section: '#app-home'
                     },
                     {
                         title: 'Sobre',
-                        section: 'app-about'
+                        section: '#app-about'
                     },
                     {
                         title: 'Dogs',
-                        section: 'app-dogs'
+                        section: '#app-dogs'
                     },
                     {
                         title: 'Agenda',
-                        section: 'app-calendar'
+                        section: '#app-calendar'
                     },
                     {
                         title: 'Contato',
-                        section: 'app-contact'
+                        section: '#app-contact'
                     },
                 ]
             }
         },
         methods: {
-            navigate(newView) {
-                eventBus.$emit('changeView', {
-                    view: newView
-                });
-                this.showMenu = false;
-            },
             hide() {
-                console.log('tentando esconder!')
-                if (this.showMenu) {
-                    this.showMenu = false;
-                }
+                eventBus.$emit('showMenu', false);
             }
         },
         directives: {
@@ -72,8 +57,20 @@
         top: 10px;
         right: 5px;
         z-index: 8;
+        background-color: #fff;
+        width: 100px;
+        line-height: 40px; 
         -webkit-box-shadow: 0 5px 5px -3px rgba(0,0,0,.2), 0 8px 10px 1px rgba(0,0,0,.14), 0 3px 14px 2px rgba(0,0,0,.12);
         box-shadow: 0 5px 5px -3px rgba(0,0,0,.2), 0 8px 10px 1px rgba(0,0,0,.14), 0 3px 14px 2px rgba(0,0,0,.12);
+    }
+
+    .hamburguer-menu .hamburguer-option {
+        padding-left: 5px;
+    }
+
+    .hamburguer-menu .hamburguer-option a{
+        color: #000000;
+        text-decoration: none;
     }
 
     .hide-menu {

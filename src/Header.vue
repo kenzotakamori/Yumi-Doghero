@@ -1,22 +1,5 @@
 <template>
     <header>
-        <!-- <ul>
-            <li>
-                <a href="#" @click.prevent="navigate('app-home')">Home</a>
-            </li>
-            <li>
-                <a href="#" @click.prevent="navigate('app-about')">About</a>
-            </li>
-            <li>
-                <a href="#" @click.prevent="navigate('app-dogs')">Dogs</a>
-            </li>
-            <li>
-                <a href="#" @click.prevent="navigate('app-calendar')">Calendar</a>
-            </li>
-            <li>
-                <a href="#" @click.prevent="navigate('app-contact')">Contact</a>
-            </li>
-        </ul> -->
         <div class="logo">
             Y
         </div>
@@ -28,7 +11,7 @@
                 Deixe seu dog comigo!
             </template>
         </div>
-        <div class="menu-button" @click="openMenu">
+        <div class="menu-button" @click.stop="openMenu">
             H
         </div>
     </header>
@@ -49,13 +32,8 @@
             }
         },
         methods: {
-            navigate(newView) {
-                eventBus.$emit('changeView', {
-                    view: newView
-                })
-            },
             openMenu() {
-                eventBus.$emit('openMenu', {});
+                eventBus.$emit('showMenu', true);
             }
         }
         

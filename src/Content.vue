@@ -20,9 +20,6 @@
 
     export default {
         created() {
-            eventBus.$on('changeView', (data) => {
-                this.view = data.view
-            });
             eventBus.$on('coverLoaded', (data) => {
                 this.coverLoaded = true
             });

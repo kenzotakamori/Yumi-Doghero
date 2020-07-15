@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <hamburguer-menu></hamburguer-menu>
+    <hamburguer-menu v-if="showMenu"></hamburguer-menu>
     <app-header></app-header>
     <app-content></app-content>
     <app-footer></app-footer>
@@ -12,12 +12,19 @@
   import Content from './Content.vue';
   import Footer from './Footer.vue';
   import HamburguerMenu from './HamburguerMenu.vue';
+  import { eventBus } from './main';
 
   export default {
     name: 'app',
+    created () {
+      eventBus.$on('showMenu', (flag) => {
+        console.log('flag recebida: ', flag)
+        this.showMenu = flag;
+      });
+    },
     data () {
       return {
-      msg: 'Welcome to Your Vue.js App'
+        showMenu: false
       }
     },
     components: {

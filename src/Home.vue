@@ -1,5 +1,5 @@
 <template>
-    <section class="app-home">
+    <section id="app-home">
         <div class="carousel-container">
             <div class="home-resources-content">
                 <div class="row">
