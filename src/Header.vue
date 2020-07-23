@@ -77,4 +77,10 @@
         transition: 0.5s ease-in-out;
     }
 
+    @media(min-width: 768px) {
+        /* Configurações desktop */
+        /* header {
+            background-color: blue;
+        } */
+    }
 </style>

@@ -64,10 +64,10 @@
 <style>
     .container {
         max-width: 1140px!important;
-        width: 100%;
-        height: 100vh;
-        padding-right: 15px;
-        padding-left: 15px;
+        min-height: 100vh;
+        padding-right: 30px;
+        padding-left: 30px;
+        padding-top: 60px;
         margin-right: auto;
         margin-left: auto;
     }
