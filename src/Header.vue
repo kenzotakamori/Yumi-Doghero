@@ -11,8 +11,12 @@
                 Deixe seu dog comigo!
             </template>
         </div>
-        <div class="menu-button" @click.stop="openMenu">
-            H
+        <div class="menu-button" @click.stop="openMenu" @mouseover="openMenu">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="14" viewBox="0 0 20 14">
+                <g fill="none" fill-rule="evenodd" stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                    <path d="M1 7h18M1 1h18M1 13h18"/>
+                </g>
+            </svg>
         </div>
     </header>
 </template>

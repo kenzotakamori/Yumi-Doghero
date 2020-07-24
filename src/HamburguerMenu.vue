@@ -54,7 +54,7 @@
     .hamburguer-menu {
         position: fixed;
         display: inline-block;
-        top: 10px;
+        top: 50px;
         right: 5px;
         z-index: 8;
         background-color: #fff;

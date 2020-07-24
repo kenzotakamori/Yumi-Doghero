@@ -18,7 +18,6 @@
     name: 'app',
     created () {
       eventBus.$on('showMenu', (flag) => {
-        console.log('flag recebida: ', flag)
         this.showMenu = flag;
       });
     },
