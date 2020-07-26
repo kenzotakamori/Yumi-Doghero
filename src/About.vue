@@ -1,7 +1,7 @@
 <template>
     <section id="app-about">
         <div class="container">
-            <h1>About</h1>
+            <h1><span>About</span></h1>
             <div class="about-yumi">
                 <img src='/src/assets/images/profile.jpg'>
                 <p>

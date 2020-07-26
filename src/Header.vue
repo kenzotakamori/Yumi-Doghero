@@ -1,5 +1,5 @@
 <template>
-    <header>
+    <header :class="{shadowing: !isCoverVisible}">
         <div class="logo">
             Y
         </div>

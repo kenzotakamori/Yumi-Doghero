@@ -1,5 +1,5 @@
 <template>
-  <div class="hamburguer-menu" v-click-outside="hide">
+  <div class="hamburguer-menu shadowing" v-click-outside="hide">
       <div v-for="option in hamburguerOptions" :key="option.title" class="hamburguer-option">
           <a :href="option.section" @click="hide">
               {{option.title}}
@@ -60,8 +60,6 @@
         background-color: #fff;
         width: 100px;
         line-height: 40px; 
-        -webkit-box-shadow: 0 5px 5px -3px rgba(0,0,0,.2), 0 8px 10px 1px rgba(0,0,0,.14), 0 3px 14px 2px rgba(0,0,0,.12);
-        box-shadow: 0 5px 5px -3px rgba(0,0,0,.2), 0 8px 10px 1px rgba(0,0,0,.14), 0 3px 14px 2px rgba(0,0,0,.12);
     }
 
     .hamburguer-menu .hamburguer-option {

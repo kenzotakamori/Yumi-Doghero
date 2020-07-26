@@ -4,14 +4,14 @@
             <h1>Dogs</h1>
             <table>
                 <tr>
-                    <td class='dogs-catalog'>
+                    <td class="dogs-catalog">
                         <div v-for="dog in dogs" :key="dog.id">
-                            <img :src="dog.imgUrl" @click="showSelectedDog(dog)">
+                            <img class="shadowing" :src="dog.imgUrl" @click="showSelectedDog(dog)">
                         </div>
                     </td>
-                    <td class='dogs-info'>
+                    <td class="dogs-info">
                         <template v-if="selectedDog" class="dog-picture">
-                            <img :src="selectedDog.imgUrl">
+                            <img class="shadowing" :src="selectedDog.imgUrl">
                             <h2>{{selectedDog.name}}</h2>
                             <p>{{selectedDog.comment}}</p>
                         </template>

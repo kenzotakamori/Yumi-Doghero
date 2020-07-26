@@ -72,8 +72,12 @@
         margin-left: auto;
     }
 
-    /* .container h1 {
+    .container h1 {
         position: sticky;
-        top: 20px;
-    } */
+        top: 50px;
+        line-height: 50px;
+        background: #fff;
+        height: 100%;
+        opacity: 0.9;
+    }    
 </style>
