@@ -31,7 +31,7 @@ export default {
 
 <style>
     footer {
-        background-color: red;
+        background-color: #ff3333;
         height: 10vh;
         line-height: 40px;
         text-align: center;

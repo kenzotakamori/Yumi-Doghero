@@ -68,12 +68,12 @@
         max-height: 70px;
         margin: 10px;
         border-radius: 5px 20px 5px;
-        border: 1px solid red;
+        border: 1px solid #ff3333;
     }
 
     .dogs-info img {
         max-height: 300px;
         border-radius: 150px;
-        border: 1px solid red;
+        border: 1px solid #ff3333;
     }
 </style>

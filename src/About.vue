@@ -45,7 +45,7 @@
     .about-yumi img, .about-place img {
         max-height: 400px;
         border-radius: 100px;
-        border: 1px solid red;
+        border: 1px solid #ff3333;
     }
     
 </style>

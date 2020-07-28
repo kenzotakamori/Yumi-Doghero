@@ -46,7 +46,7 @@
 
 <style>
     header {
-        background-color: red;
+        background-color: #ff3333;
         width: 100%;
         z-index: 2;
         height: 50px;
