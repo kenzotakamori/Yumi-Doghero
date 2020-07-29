@@ -75,9 +75,8 @@
     .container h1 {
         position: sticky;
         top: 50px;
-        line-height: 50px;
-        background: #fff;
+        line-height: 80px;
+        background-image: linear-gradient(rgba(255,255,255,1) 75%, rgba(255,255,255,0) 100%);
         height: 100%;
-        opacity: 0.9;
     }    
 </style>
