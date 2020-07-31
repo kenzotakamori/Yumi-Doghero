@@ -1,15 +1,22 @@
 <template>
-  <div class="hamburguer-menu shadowing" v-click-outside="hide">
-      <div v-for="option in hamburguerOptions" :key="option.title" class="hamburguer-option">
-          <a :href="option.section" @click="hide">
-              {{option.title}}
-          </a>
-      </div>
-  </div>
+    <div class="hamburguer-window">
+        <transition name="background">
+            <div class="hamburguer-background" @click="hide">
+                <transition>
+                    <div class="hamburguer-menu shadowing">
+                        <div v-for="option in hamburguerOptions" :key="option.title" class="hamburguer-option">
+                            <a :href="option.section" @click="hide">
+                                {{option.title}}
+                            </a>
+                        </div>
+                    </div>
+                </transition>
+            </div>
+        </transition>
+    </div>
 </template>
 
 <script>
-    import ClickOutside from 'vue-click-outside'
     import { eventBus } from './main';
 
     export default {
@@ -43,14 +50,20 @@
             hide() {
                 eventBus.$emit('showMenu', false);
             }
-        },
-        directives: {
-            ClickOutside
         }
     }
 </script>
 
 <style>
+    .hamburguer-background {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        z-index: 7;
+        background-color: rgba(0,0,0,.5);
+        opacity: 1;
+    }
+
     .hamburguer-menu {
         position: fixed;
         display: inline-block;
@@ -72,6 +85,9 @@
         font-size: larger;
         color: #fff;
         text-decoration: none;
+        display: inline-block;     
+        position: relative;    
+        width: 100%;
     }
 
     .hide-menu {

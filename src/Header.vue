@@ -4,7 +4,7 @@
             <i class="fa fa-bars"></i>
         </div>
         <div class="message">
-            <transition mode="out-in">
+            <transition name="fade" mode="out-in">
                 <span v-if="isCoverVisible" key="cover-visible">Vai viajar?</span>
                 <span v-else key="cover-invisible">Deixe seu dog comigo!</span>
             </transition>
@@ -73,6 +73,14 @@
     header .message {
         width: 90%;
         transition: 0.5s ease-in-out;
+    }
+
+    .fade-enter, .fade-leave-to {
+        opacity: 0
+    }
+
+    .fade-enter-active, .fade-leave-active {
+        transition: opacity 0.3s;
     }
 
     @media(min-width: 768px) {
