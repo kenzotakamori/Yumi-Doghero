@@ -4,12 +4,10 @@
             Y
         </div>
         <div class="message">
-            <template v-if="isCoverVisible">
-                Vai viajar? 
-            </template>
-            <template v-else>
-                Deixe seu dog comigo!
-            </template>
+            <transition mode="out-in">
+                <span v-if="isCoverVisible" key="cover-visible">Vai viajar?</span>
+                <span v-else key="cover-invisible">Deixe seu dog comigo!</span>
+            </transition>
         </div>
         <div class="menu-button" @click.stop="openMenu" @mouseover="openMenu">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="14" viewBox="0 0 20 14">

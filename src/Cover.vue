@@ -8,7 +8,7 @@
 
 <script>
     import { eventBus } from './main';
-    import { ObserveVisibility } from "vue-observe-visibility";
+    import { ObserveVisibility } from 'vue-observe-visibility';
 
     export default {
         directives: {
