@@ -1,7 +1,7 @@
 <template>
     <header :class="{shadowing: !isCoverVisible}">
-        <div class="logo">
-            Y
+        <div class="menu-button" @click.stop="openMenu" @mouseover="openMenu">
+            <i class="fa fa-bars"></i>
         </div>
         <div class="message">
             <transition mode="out-in">
@@ -9,12 +9,8 @@
                 <span v-else key="cover-invisible">Deixe seu dog comigo!</span>
             </transition>
         </div>
-        <div class="menu-button" @click.stop="openMenu" @mouseover="openMenu">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="14" viewBox="0 0 20 14">
-                <g fill="none" fill-rule="evenodd" stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-                    <path d="M1 7h18M1 1h18M1 13h18"/>
-                </g>
-            </svg>
+        <div class="logo">
+            Y
         </div>
     </header>
 </template>
@@ -62,7 +58,7 @@
         margin: 0;
         padding: 0;
         font-weight: 700;
-        color: white;
+        color: #fff;
         text-align: center;
     }
 

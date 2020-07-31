@@ -54,20 +54,23 @@
     .hamburguer-menu {
         position: fixed;
         display: inline-block;
-        top: 50px;
-        right: 5px;
+        top: 0;
+        left: 0;
         z-index: 8;
-        background-color: #fff;
-        width: 100px;
-        line-height: 40px; 
+        background-color: #ff3333;
+        width: 50%;
+        height: 100vh;
+        line-height: 70px; 
     }
 
     .hamburguer-menu .hamburguer-option {
-        padding-left: 5px;
+        padding-left: 15px;
     }
 
     .hamburguer-menu .hamburguer-option a{
-        color: #000000;
+        font-weight: 700;
+        font-size: larger;
+        color: #fff;
         text-decoration: none;
     }
 
