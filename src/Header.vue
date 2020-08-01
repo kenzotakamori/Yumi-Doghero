@@ -72,7 +72,6 @@
 
     header .message {
         width: 90%;
-        transition: 0.5s ease-in-out;
     }
 
     .fade-enter, .fade-leave-to {

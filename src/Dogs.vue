@@ -4,16 +4,14 @@
             <h1>Dogs</h1>
             <div class="dogs-section">
                 <div class="dogs-info">
-                    <template v-if="selectedDog">
-                        <div class="selected-dog">
+                    <transition name="pulse" mode="out-in">
+                        <div class="selected-dog" v-if="selectedDog" :key="selectedDog.id">
                             <img class="shadowing" :src="selectedDog.imgUrl">
                             <h2>{{selectedDog.name}}</h2>
                             <span>{{selectedDog.comment}}</span>
                         </div>
-                    </template>
-                    <template v-else>
-                        <p>Clique em algum dog!</p>   
-                    </template>
+                        <p v-else>Clique em algum dog!</p>   
+                    </transition>
                 </div>
                 <div class="dogs-catalog">
                     <div v-for="dog in dogs" :key="dog.id">
@@ -84,5 +82,18 @@
         max-width: 90%;
         border-radius: 150px;
         border: 1px solid #ff3333;
+    }
+
+    .dogs-section .dogs-info span {
+        text-align: center;
+    }
+
+    .pulse-enter, .pulse-leave-to {
+        opacity: 0
+        /* TODO: change scale */
+    }
+
+    .pulse-enter-active, .pulse-leave-active {
+        transition: opacity 0.3s;
     }
 </style>
