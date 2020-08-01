@@ -63,10 +63,12 @@
 </script>
 <style>
     .container {
+        display: grid;
+        place-items: center;
         max-width: 1140px!important;
         min-height: 100vh;
-        padding-right: 30px;
-        padding-left: 30px;
+        padding-right: 10px;
+        padding-left: 20px;
         padding-top: 60px;
         margin-right: auto;
         margin-left: auto;
@@ -76,7 +78,8 @@
         position: sticky;
         top: 50px;
         line-height: 80px;
-        background-image: linear-gradient(rgba(255,255,255,1) 75%, rgba(255,255,255,0) 100%);
+        background-image: linear-gradient(rgba(255,255,255,1) 40%, rgba(255,255,255,0) 100%);
         height: 100%;
+        width: 100%
     }    
 </style>
