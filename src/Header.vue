@@ -1,11 +1,11 @@
 <template>
-    <header :class="{shadowing: !isCoverVisible}">
+    <header :class="{shadowing: !coverVisibility}">
         <div class="menu-button" @click.stop="openMenu" @mouseover="openMenu">
             <i class="fa fa-bars"></i>
         </div>
         <div class="message">
             <transition name="fade" mode="out-in">
-                <span v-if="isCoverVisible" key="cover-visible">Vai viajar?</span>
+                <span v-if="coverVisibility" key="cover-visible">Vai viajar?</span>
                 <span v-else key="cover-invisible">Deixe seu dog comigo!</span>
             </transition>
         </div>
@@ -20,13 +20,13 @@
 
     export default {
         created() {
-            eventBus.$on('coverVisibilityChanged', (flag) => {
-                this.isCoverVisible = flag;
+            eventBus.$on('isCoverVisible', (flag) => {
+                this.coverVisibility = flag;
             });
         },
         data() {
             return {
-                isCoverVisible: true
+                coverVisibility: true
             }
         },
         methods: {

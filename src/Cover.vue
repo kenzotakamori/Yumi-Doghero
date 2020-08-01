@@ -1,5 +1,5 @@
 <template>
-    <section class="app-cover shadowing" v-observe-visibility="coverVisibilityChanged">
+    <section class="app-cover shadowing" v-observe-visibility="isCoverVisible">
         <div class="initial">
             cover
         </div>
@@ -18,8 +18,8 @@
             eventBus.$emit('coverLoaded', true);            
         },
         methods: {
-            coverVisibilityChanged: function(isVisible, entry) {
-                eventBus.$emit('coverVisibilityChanged', isVisible)
+            isCoverVisible: function(isVisible, entry) {
+                eventBus.$emit('isCoverVisible', isVisible)
             }
         } 
     }
