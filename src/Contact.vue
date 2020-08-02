@@ -1,7 +1,8 @@
 <template>
     <section id="app-contact">
+        <h1>Contact</h1>
         <div class="container">
-            <h1>Contact</h1>
+            
         </div>
     </section>
 </template>

@@ -66,7 +66,7 @@
         display: grid;
         place-items: center;
         max-width: 1140px!important;
-        min-height: 100vh;
+        min-height: 80vh;
         padding-right: 10px;
         padding-left: 20px;
         padding-top: 60px;
@@ -74,9 +74,10 @@
         margin-left: auto;
     }
 
-    .container h1 {
+    h1 {
         position: sticky;
         top: 50px;
+        padding-left: 20px;
         line-height: 80px;
         background-image: linear-gradient(rgba(255,255,255,1) 40%, rgba(255,255,255,0) 100%);
         width: 100%

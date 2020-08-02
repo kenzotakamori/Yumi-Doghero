@@ -1,7 +1,7 @@
 <template>
     <section id="app-dogs">
+        <h1>Dogs</h1>
         <div class="container">
-            <h1>Dogs</h1>
             <div class="dogs-section">
                 <div class="dogs-info">
                     <transition name="pulse" mode="out-in">
