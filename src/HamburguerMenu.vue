@@ -50,7 +50,7 @@
                 this.openMenu = false;
                 let timeout = setTimeout(() => {
                     eventBus.$emit('showMenu', false);
-                }, 300);
+                }, 200);
             }
         }
     }
@@ -109,7 +109,11 @@
         transform: translateX(0);
     }
 
-    .slide-enter-active, .slide-leave-active {
+    .slide-enter-active {
         transition: transform .3s;
+    }
+
+    .slide-leave-active {
+        transition: transform .2s;
     }
 </style>
