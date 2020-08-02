@@ -88,12 +88,34 @@
         text-align: center;
     }
 
-    .pulse-enter, .pulse-leave-to {
-        opacity: 0
-        /* TODO: change scale */
+    .pulse-enter-active {
+        animation: bounce-in .5s;
     }
 
-    .pulse-enter-active, .pulse-leave-active {
-        transition: opacity 0.3s;
+    .pulse-leave{
+        opacity: 1;
+    }
+
+    .pulse-leave-to {
+        opacity: 0;
+    }
+
+    .pulse-leave-active {
+        transition: opacity .3s;
+    }
+
+    @keyframes bounce-in {
+        0% {
+            opacity: .5;
+            transform: scale(0);
+        }
+        50% {
+            opacity: 0.7;
+            transform: scale(1.1);
+        }
+        100% {
+            opacity: 1;
+            transform: scale(1);
+        }
     }
 </style>
