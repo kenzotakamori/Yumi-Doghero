@@ -1,8 +1,6 @@
 <template>
   <div id="app">
-    <transition>
-      <hamburguer-menu v-if="showMenu"></hamburguer-menu>
-    </transition>
+    <hamburguer-menu v-if="showMenu"></hamburguer-menu>
     <app-header></app-header>
     <app-content></app-content>
     <app-footer></app-footer>

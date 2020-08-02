@@ -1,18 +1,16 @@
 <template>
     <div class="hamburguer-window">
-        <transition name="background">
-            <div class="hamburguer-background" @click="hide">
-                <transition>
-                    <div class="hamburguer-menu shadowing">
-                        <div v-for="option in hamburguerOptions" :key="option.title" class="hamburguer-option">
-                            <a :href="option.section" @click="hide">
-                                {{option.title}}
-                            </a>
-                        </div>
+        <div class="hamburguer-background" @click="hide">
+            <transition name="slide" appear>
+                <div class="hamburguer-menu shadowing" v-if="openMenu">
+                    <div v-for="option in hamburguerOptions" :key="option.title" class="hamburguer-option">
+                        <a :href="option.section">
+                            {{option.title}}
+                        </a>
                     </div>
-                </transition>
-            </div>
-        </transition>
+                </div>
+            </transition>
+        </div>
     </div>
 </template>
 
@@ -22,6 +20,7 @@
     export default {
         data () {
             return {
+                openMenu: true,
                 hamburguerOptions: [
                     {
                         title: 'Home',
@@ -48,7 +47,10 @@
         },
         methods: {
             hide() {
-                eventBus.$emit('showMenu', false);
+                this.openMenu = false;
+                let timeout = setTimeout(() => {
+                    eventBus.$emit('showMenu', false);
+                }, 300);
             }
         }
     }
@@ -76,8 +78,8 @@
         line-height: 70px; 
     }
 
-    .hamburguer-menu .hamburguer-option {
-        padding-left: 15px;
+    .hamburguer-menu .hamburguer-option:hover {
+        background-color: #bb2c2c;
     }
 
     .hamburguer-menu .hamburguer-option a{
@@ -88,9 +90,26 @@
         display: inline-block;     
         position: relative;    
         width: 100%;
+        padding-left: 15px;
+    }
+
+    .hamburguer-menu .hamburguer-option a:hover{
+        color: #909090;
     }
 
     .hide-menu {
         visibility: hidden;
+    }
+
+    .slide-enter, .slide-leave-to {
+        transform: translateX(-100%);
+    }
+
+    .slide-enter-to, .slide-leave {
+        transform: translateX(0);
+    }
+
+    .slide-enter-active, .slide-leave-active {
+        transition: transform .3s;
     }
 </style>
