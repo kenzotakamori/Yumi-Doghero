@@ -1,7 +1,7 @@
 <template>
     <section id="app-home">
         <h1>Home</h1>
-        <div class="container carousel-container">
+        <div class="carousel-container">
             <div class="home-resources-content">
                 <div class="row">
                     <div id="carousel-home-resources" class="carousel-home-resources">
@@ -48,9 +48,13 @@
 </script>
 <style>
     .carousel-container {
-        min-height: 70vh;
+        width: 100%;
+        height: 100vh;
+        padding-top: 60px;
     }
-
+    .carousel-container  h1 {
+        padding-left: 30px;
+    }
     .carousel-home-resources .left-1 {
         transform: translateX(-500px) translateZ(-400px) rotateY(-30deg) !important;
     }
