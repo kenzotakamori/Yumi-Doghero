@@ -99,7 +99,6 @@
     .pulse-leave{
         opacity: 1;
     }
-    /* teste */
 
     .pulse-leave-to {
         opacity: 0;
