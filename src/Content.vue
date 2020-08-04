@@ -79,6 +79,7 @@
         top: 50px;
         padding-left: 20px;
         line-height: 80px;
+        z-index: 1;
         background-image: linear-gradient(rgba(255,255,255,1) 40%, rgba(255,255,255,0) 100%);
     }    
 </style>

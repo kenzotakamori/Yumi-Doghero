@@ -13,8 +13,8 @@
                         <p v-else>Clique em algum dog!</p>   
                     </transition>
                 </div>
-                <div class="dogs-catalog">
-                    <div v-for="dog in dogs" :key="dog.id">
+                <div class="dogs-catalog animatedParent" data-sequence="50">
+                    <div v-for="(dog, index) in dogs" :key="dog.id" :data-id="index" class="animated fadeInUp">
                         <img class="shadowing" :src="dog.imgUrl" @click="showSelectedDog(dog)">
                     </div>
                 </div>
@@ -88,6 +88,10 @@
         text-align: center;
     }
 
+    .fadeInUp {
+        animation-duration: 0.8s;
+    }
+
     .pulse-enter-active {
         animation: bounce-in .5s;
     }
@@ -106,11 +110,11 @@
 
     @keyframes bounce-in {
         0% {
-            opacity: .5;
+            opacity: .7;
             transform: scale(0);
         }
         50% {
-            opacity: 0.7;
+            opacity: .9;
             transform: scale(1.1);
         }
         100% {
